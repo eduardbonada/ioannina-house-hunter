@@ -159,12 +159,26 @@ def generate_html_report(output_path=None):
         .location {{
             font-size: 1.1rem;
             color: #495057;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             font-weight: 500;
         }}
 
         .location::before {{
             content: "📍 ";
+        }}
+
+        .property-type {{
+            display: inline-block;
+            font-size: 1.1rem;
+            color: #495057;
+            background: white;
+            padding: 0;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }}
+
+        .property-type::before {{
+            content: "🏠 ";
         }}
 
         .specs {{
@@ -272,6 +286,39 @@ def generate_html_report(output_path=None):
             font-size: 1.1rem;
         }}
 
+        .section-divider {{
+            background: white;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+        }}
+
+        .section-divider h2 {{
+            font-size: 1.5rem;
+            color: #667eea;
+            margin: 0;
+            font-weight: 600;
+        }}
+
+        .section-divider.new-today {{
+            border-left-color: #28a745;
+        }}
+
+        .section-divider.new-today h2 {{
+            color: #28a745;
+        }}
+
+        .section-divider.earlier {{
+            border-left-color: #6c757d;
+        }}
+
+        .section-divider.earlier h2 {{
+            color: #6c757d;
+        }}
+
         .stats p {{
             color: #6c757d;
             font-size: 1.1rem;
@@ -354,7 +401,10 @@ def generate_html_report(output_path=None):
 """
 
     # Generate listing cards
-    for listing in listings:
+    showing_earlier_section = False
+    showing_new_section = False
+
+    for idx, listing in enumerate(listings):
         price = listing.get('price', 0)
         price_formatted = f"€{price:,}"
         location = listing.get('location', 'Unknown location')
@@ -365,6 +415,7 @@ def generate_html_report(output_path=None):
         photo_url = listing.get('photo_url', '')
         first_seen = listing.get('first_seen', 'Unknown')
         url = listing.get('url', '#')
+        property_type = listing.get('property_type', '')
 
         # Calculate price per sqm
         price_per_sqm = int(price / size) if size > 0 else 0
@@ -376,6 +427,9 @@ def generate_html_report(output_path=None):
         elif 'vrespiti' in url.lower():
             source_name = 'Vrespiti'
             source_color = '#e74c3c'
+        elif 'oikiarealestate' in url.lower():
+            source_name = 'Oikia'
+            source_color = '#9b59b6'
         else:
             source_name = 'Unknown'
             source_color = '#95a5a6'
@@ -389,10 +443,27 @@ def generate_html_report(output_path=None):
         highlights = listing.get('highlights', [])
         highlights_html = ''.join([f'<span class="highlight-tag">{h}</span>' for h in highlights])
 
+        # Add section dividers
+        section_html = ""
+        if is_new and not showing_new_section:
+            section_html = """
+        <div class="section-divider new-today">
+            <h2>🌟 New Listings Today</h2>
+        </div>
+"""
+            showing_new_section = True
+        elif not is_new and not showing_earlier_section:
+            section_html = """
+        <div class="section-divider earlier">
+            <h2>📋 Earlier Listings</h2>
+        </div>
+"""
+            showing_earlier_section = True
+
         # Fallback image SVG
         fallback_svg = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23adb5bd' font-size='18' dy='.3em'%3ENo Image%3C/text%3E%3C/svg%3E"
 
-        listing_html = f"""
+        listing_html = section_html + f"""
         <div class="listing">
             <div class="listing-content">
                 <div class="listing-image">
@@ -404,12 +475,12 @@ def generate_html_report(output_path=None):
                     <div class="listing-header">
                         <div class="price">{price_formatted}{new_badge}</div>
                         <div>
-                            <div class="property-id">{property_id}</div>
                             <span class="source-badge" style="background: {source_color};">{source_name}</span>
                         </div>
                     </div>
 
                     <div class="location">{location}</div>
+                    <div class="property-type">{property_type}</div>
 
                     <div class="specs">
                         <div class="spec">

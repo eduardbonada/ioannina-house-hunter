@@ -82,7 +82,7 @@ def matches_criteria(listing):
     if size:
         if size < CRITERIA['must_have']['size_min']:
             return False
-        highlights.append(f"{size} sqm")
+        # Don't add to highlights - already shown in specs grid
     else:
         highlights.append("⚠️ Size not listed")
 
@@ -91,25 +91,14 @@ def matches_criteria(listing):
     if bedrooms:
         if bedrooms < CRITERIA['must_have']['bedrooms_min']:
             return False
-        if bedrooms >= 3:
-            highlights.append(f"{bedrooms} bedrooms (preferred!)")
-        else:
-            highlights.append(f"{bedrooms} bedrooms")
+        # Don't add to highlights - already shown in specs grid
     else:
         highlights.append("⚠️ Bedrooms not listed")
 
-    # Location info (blacklist check already done above)
-    if location and location != 'unknown':
-        # Just add location as info
-        highlights.append(f"📍 {location}")
-    elif location == 'unknown':
-        highlights.append("⚠️ Location unknown - needs verification")
+    # Location check (blacklist already done above)
+    # Don't add to highlights - already shown prominently
 
-    # Display property type from scraped data
-    property_type = listing.get('property_type', '')
-    if property_type and property_type != 'Unknown':
-        # Just show the property type that was scraped
-        highlights.append(f"🏠 {property_type}")
+    # Property type - don't add to highlights, will be shown separately in HTML
 
     # Check for preferred features
     title = listing.get('title', '')
@@ -127,10 +116,7 @@ def matches_criteria(listing):
         else:
             highlights.append(f"⬆️ Price increased by €{diff:,}")
 
-    # Add price per sqm if available
-    if price and size:
-        price_per_sqm = price / size
-        highlights.append(f"€{price_per_sqm:.0f}/sqm")
+    # Don't add price per sqm to highlights - already shown in specs grid
 
     listing['highlights'] = highlights
 

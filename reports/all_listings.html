@@ -111,12 +111,26 @@
         .location {
             font-size: 1.1rem;
             color: #495057;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             font-weight: 500;
         }
 
         .location::before {
             content: "📍 ";
+        }
+
+        .property-type {
+            display: inline-block;
+            font-size: 1.1rem;
+            color: #495057;
+            background: white;
+            padding: 0;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .property-type::before {
+            content: "🏠 ";
         }
 
         .specs {
@@ -224,6 +238,39 @@
             font-size: 1.1rem;
         }
 
+        .section-divider {
+            background: white;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+        }
+
+        .section-divider h2 {
+            font-size: 1.5rem;
+            color: #667eea;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .section-divider.new-today {
+            border-left-color: #28a745;
+        }
+
+        .section-divider.new-today h2 {
+            color: #28a745;
+        }
+
+        .section-divider.earlier {
+            border-left-color: #6c757d;
+        }
+
+        .section-divider.earlier h2 {
+            color: #6c757d;
+        }
+
         .stats p {
             color: #6c757d;
             font-size: 1.1rem;
@@ -295,13 +342,17 @@
     <div class="container">
         <div class="stats">
             <div class="stat-item">
-                <h2>42</h2>
+                <h2>43</h2>
                 <p>Total Reported Listings</p>
             </div>
             <div class="stat-item new-today">
-                <h2>40</h2>
+                <h2>41</h2>
                 <p>New Listings Today</p>
             </div>
+        </div>
+
+        <div class="section-divider new-today">
+            <h2>🌟 New Listings Today</h2>
         </div>
 
         <div class="listing">
@@ -315,12 +366,12 @@
                     <div class="listing-header">
                         <div class="price">€180,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-23069</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΙΣΤΟΡΙΚΟ ΚΕΝΤΡΟ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΔΙΑΜΕΡΙΣΜΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -346,7 +397,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">100 sqm</span><span class="highlight-tag">2 bedrooms</span><span class="highlight-tag">📍 ΙΣΤΟΡΙΚΟ ΚΕΝΤΡΟ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΔΙΑΜΕΡΙΣΜΑ</span><span class="highlight-tag">€1800/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -370,12 +421,12 @@
                     <div class="listing-header">
                         <div class="price">€200,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-22841</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΑΜΠΕΛΟΚΗΠΟΙ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΣΥΓΚΡΟΤΗΜΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -401,7 +452,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">179 sqm</span><span class="highlight-tag">6 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΑΜΠΕΛΟΚΗΠΟΙ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΣΥΓΚΡΟΤΗΜΑ</span><span class="highlight-tag">€1117/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -425,12 +476,12 @@
                     <div class="listing-header">
                         <div class="price">€305,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-22498</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΛΕΩΦΟΡΟΣ ΔΩΔΩΝΗΣ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΜΕΖΟΝΕΤΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -456,7 +507,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">100 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΛΕΩΦΟΡΟΣ ΔΩΔΩΝΗΣ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΜΕΖΟΝΕΤΑ</span><span class="highlight-tag">€3050/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -480,12 +531,12 @@
                     <div class="listing-header">
                         <div class="price">€305,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-22138</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΛΕΩΦΟΡΟΣ ΔΩΔΩΝΗΣ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΜΕΖΟΝΕΤΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -511,7 +562,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">100 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΛΕΩΦΟΡΟΣ ΔΩΔΩΝΗΣ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΜΕΖΟΝΕΤΑ</span><span class="highlight-tag">€3050/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -535,12 +586,12 @@
                     <div class="listing-header">
                         <div class="price">€315,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-21441</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΑΝΑΤΟΛΗ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΜΕΖΟΝΕΤΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -566,7 +617,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">113 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΑΝΑΤΟΛΗ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΜΕΖΟΝΕΤΑ</span><span class="highlight-tag">€2788/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -590,12 +641,12 @@
                     <div class="listing-header">
                         <div class="price">€320,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-21440</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΑΝΑΤΟΛΗ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΜΕΖΟΝΕΤΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -621,7 +672,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">115 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΑΝΑΤΟΛΗ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΜΕΖΟΝΕΤΑ</span><span class="highlight-tag">€2783/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -645,12 +696,12 @@
                     <div class="listing-header">
                         <div class="price">€342,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-21439</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΑΝΑΤΟΛΗ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΜΕΖΟΝΕΤΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -676,7 +727,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">122 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΑΝΑΤΟΛΗ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΜΕΖΟΝΕΤΑ</span><span class="highlight-tag">€2803/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -700,12 +751,12 @@
                     <div class="listing-header">
                         <div class="price">€265,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-21438</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΑΝΑΤΟΛΗ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΜΕΖΟΝΕΤΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -731,7 +782,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">95 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΑΝΑΤΟΛΗ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΜΕΖΟΝΕΤΑ</span><span class="highlight-tag">€2789/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -755,12 +806,12 @@
                     <div class="listing-header">
                         <div class="price">€250,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-22550</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΑΝΑΤΟΛΗ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΔΙΑΜΕΡΙΣΜΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -786,66 +837,11 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">126 sqm</span><span class="highlight-tag">2 bedrooms</span><span class="highlight-tag">📍 ΑΝΑΤΟΛΗ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΔΙΑΜΕΡΙΣΜΑ</span><span class="highlight-tag">€1984/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
                         <a href="https://www.vrespiti.gr/pdetails?purpose=1&category=1&area=655933595&bedroomsmin=2&bedroomsmax=&sizemin=85&sizemax=&pricemin=150000&pricemax=350000&cyearmin=&cyearmax=&floormin=&floormax=&partner=&lng=&p=3&id=%CE%9A%2D22550&requestpage=search"
-                           target="_blank"
-                           class="view-button">View Property Details →</a>
-                        <div class="first-seen">First seen: 2026-02-09</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="listing">
-            <div class="listing-content">
-                <div class="listing-image">
-                    <img src="https://www.vrespiti.gr/u_photos/K-1789682807s.jpg"
-                         alt="Property Κ-22853"
-                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23adb5bd' font-size='18' dy='.3em'%3ENo Image%3C/text%3E%3C/svg%3E'">
-                </div>
-                <div class="listing-details">
-                    <div class="listing-header">
-                        <div class="price">€350,000<span class="new-badge">New Today</span></div>
-                        <div>
-                            <div class="property-id">Κ-22853</div>
-                            <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
-                        </div>
-                    </div>
-
-                    <div class="location">ΝΕΑ ΖΩΗ, ΙΩΑΝΝΙΝΑ</div>
-
-                    <div class="specs">
-                        <div class="spec">
-                            <div class="spec-icon">📐</div>
-                            <div class="spec-label">Size</div>
-                            <div class="spec-value">240 m²</div>
-                        </div>
-                        <div class="spec">
-                            <div class="spec-icon">💶</div>
-                            <div class="spec-label">Per m²</div>
-                            <div class="spec-value">€1,458</div>
-                        </div>
-                        <div class="spec">
-                            <div class="spec-icon">🛏️</div>
-                            <div class="spec-label">Bedrooms</div>
-                            <div class="spec-value">5</div>
-                        </div>
-                        <div class="spec">
-                            <div class="spec-icon">🚿</div>
-                            <div class="spec-label">Bathrooms</div>
-                            <div class="spec-value">5</div>
-                        </div>
-                    </div>
-
-                    <div class="highlights">
-                        <span class="highlight-tag">240 sqm</span><span class="highlight-tag">5 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΝΕΑ ΖΩΗ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΜΕΖΟΝΕΤΑ</span><span class="highlight-tag">€1458/sqm</span>
-                    </div>
-
-                    <div class="view-link">
-                        <a href="https://www.vrespiti.gr/pdetails?purpose=1&category=1&area=655933595&bedroomsmin=2&bedroomsmax=&sizemin=85&sizemax=&pricemin=150000&pricemax=350000&cyearmin=&cyearmax=&floormin=&floormax=&partner=&lng=&p=3&id=%CE%9A%2D22853&requestpage=search"
                            target="_blank"
                            class="view-button">View Property Details →</a>
                         <div class="first-seen">First seen: 2026-02-09</div>
@@ -865,12 +861,12 @@
                     <div class="listing-header">
                         <div class="price">€150,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-21677</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΚΕΝΤΡΟ - ΙΩΑΝΝΙΝΑ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΔΙΑΜΕΡΙΣΜΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -896,7 +892,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">92 sqm</span><span class="highlight-tag">2 bedrooms</span><span class="highlight-tag">📍 ΚΕΝΤΡΟ - ΙΩΑΝΝΙΝΑ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΔΙΑΜΕΡΙΣΜΑ</span><span class="highlight-tag">€1630/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -920,12 +916,12 @@
                     <div class="listing-header">
                         <div class="price">€290,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-22949</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΚΙΑΦΑ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΔΙΑΜΕΡΙΣΜΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -951,7 +947,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">93 sqm</span><span class="highlight-tag">2 bedrooms</span><span class="highlight-tag">📍 ΚΙΑΦΑ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΔΙΑΜΕΡΙΣΜΑ</span><span class="highlight-tag">€3118/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -975,12 +971,12 @@
                     <div class="listing-header">
                         <div class="price">€260,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-22814</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΓΕΩΡΓΙΟΥ  ΠΑΠΑΝΔΡΕΟΥ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΔΙΑΜΕΡΙΣΜΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -1006,66 +1002,11 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">120 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΓΕΩΡΓΙΟΥ  ΠΑΠΑΝΔΡΕΟΥ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΔΙΑΜΕΡΙΣΜΑ</span><span class="highlight-tag">€2167/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
                         <a href="https://www.vrespiti.gr/pdetails?purpose=1&category=1&area=655933595&bedroomsmin=2&bedroomsmax=&sizemin=85&sizemax=&pricemin=150000&pricemax=350000&cyearmin=&cyearmax=&floormin=&floormax=&partner=&lng=&p=3&id=%CE%9A%2D22814&requestpage=search"
-                           target="_blank"
-                           class="view-button">View Property Details →</a>
-                        <div class="first-seen">First seen: 2026-02-09</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="listing">
-            <div class="listing-content">
-                <div class="listing-image">
-                    <img src="https://www.vrespiti.gr/u_photos/K-775679584s.jpg"
-                         alt="Property Κ-22085"
-                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23adb5bd' font-size='18' dy='.3em'%3ENo Image%3C/text%3E%3C/svg%3E'">
-                </div>
-                <div class="listing-details">
-                    <div class="listing-header">
-                        <div class="price">€330,000<span class="new-badge">New Today</span></div>
-                        <div>
-                            <div class="property-id">Κ-22085</div>
-                            <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
-                        </div>
-                    </div>
-
-                    <div class="location">ΝΕΑ ΖΩΗ, ΙΩΑΝΝΙΝΑ</div>
-
-                    <div class="specs">
-                        <div class="spec">
-                            <div class="spec-icon">📐</div>
-                            <div class="spec-label">Size</div>
-                            <div class="spec-value">220 m²</div>
-                        </div>
-                        <div class="spec">
-                            <div class="spec-icon">💶</div>
-                            <div class="spec-label">Per m²</div>
-                            <div class="spec-value">€1,500</div>
-                        </div>
-                        <div class="spec">
-                            <div class="spec-icon">🛏️</div>
-                            <div class="spec-label">Bedrooms</div>
-                            <div class="spec-value">4</div>
-                        </div>
-                        <div class="spec">
-                            <div class="spec-icon">🚿</div>
-                            <div class="spec-label">Bathrooms</div>
-                            <div class="spec-value">1</div>
-                        </div>
-                    </div>
-
-                    <div class="highlights">
-                        <span class="highlight-tag">220 sqm</span><span class="highlight-tag">4 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΝΕΑ ΖΩΗ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΜΟΝΟΚΑΤΟΙΚΙΑ</span><span class="highlight-tag">€1500/sqm</span>
-                    </div>
-
-                    <div class="view-link">
-                        <a href="https://www.vrespiti.gr/pdetails?purpose=1&category=1&area=655933595&bedroomsmin=2&bedroomsmax=&sizemin=85&sizemax=&pricemin=150000&pricemax=350000&cyearmin=&cyearmax=&floormin=&floormax=&partner=&lng=&p=3&id=%CE%9A%2D22085&requestpage=search"
                            target="_blank"
                            class="view-button">View Property Details →</a>
                         <div class="first-seen">First seen: 2026-02-09</div>
@@ -1085,12 +1026,12 @@
                     <div class="listing-header">
                         <div class="price">€300,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-22262</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΓΙΑΝΝΙΩΤΙΚΟ ΣΑΛΟΝΙ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΜΟΝΟΚΑΤΟΙΚΙΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -1116,7 +1057,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">239 sqm</span><span class="highlight-tag">4 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΓΙΑΝΝΙΩΤΙΚΟ ΣΑΛΟΝΙ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΜΟΝΟΚΑΤΟΙΚΙΑ</span><span class="highlight-tag">€1255/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -1140,12 +1081,12 @@
                     <div class="listing-header">
                         <div class="price">€195,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-20199</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΑΝΑΤΟΛΗ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΔΙΑΜΕΡΙΣΜΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -1171,7 +1112,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">110 sqm</span><span class="highlight-tag">2 bedrooms</span><span class="highlight-tag">📍 ΑΝΑΤΟΛΗ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΔΙΑΜΕΡΙΣΜΑ</span><span class="highlight-tag">€1773/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -1195,12 +1136,12 @@
                     <div class="listing-header">
                         <div class="price">€240,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-22824</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΑΝΑΤΟΛΗ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΜΕΖΟΝΕΤΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -1226,7 +1167,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">150 sqm</span><span class="highlight-tag">4 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΑΝΑΤΟΛΗ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΜΕΖΟΝΕΤΑ</span><span class="highlight-tag">€1600/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -1250,12 +1191,12 @@
                     <div class="listing-header">
                         <div class="price">€270,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-18937</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΛΕΩΦΟΡΟΣ ΔΩΔΩΝΗΣ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΔΙΑΜΕΡΙΣΜΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -1281,7 +1222,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">96 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΛΕΩΦΟΡΟΣ ΔΩΔΩΝΗΣ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΔΙΑΜΕΡΙΣΜΑ</span><span class="highlight-tag">€2812/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -1305,12 +1246,12 @@
                     <div class="listing-header">
                         <div class="price">€260,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-22581</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΒΟΤΑΝΙΚΟΣ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΔΙΑΜΕΡΙΣΜΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -1336,7 +1277,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">129 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΒΟΤΑΝΙΚΟΣ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΔΙΑΜΕΡΙΣΜΑ</span><span class="highlight-tag">€2016/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -1360,12 +1301,12 @@
                     <div class="listing-header">
                         <div class="price">€163,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-21699</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΒΗΛΑΡΑ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΔΙΑΜΕΡΙΣΜΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -1391,7 +1332,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">107 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΒΗΛΑΡΑ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΔΙΑΜΕΡΙΣΜΑ</span><span class="highlight-tag">€1523/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -1415,12 +1356,12 @@
                     <div class="listing-header">
                         <div class="price">€350,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-20397</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΚΑΡΔΑΜΙΤΣΙΑ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΜΟΝΟΚΑΤΟΙΚΙΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -1446,7 +1387,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">180 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΚΑΡΔΑΜΙΤΣΙΑ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΜΟΝΟΚΑΤΟΙΚΙΑ</span><span class="highlight-tag">€1944/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -1470,12 +1411,12 @@
                     <div class="listing-header">
                         <div class="price">€350,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-20396</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΚΑΡΔΑΜΙΤΣΙΑ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΜΕΖΟΝΕΤΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -1501,7 +1442,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">180 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΚΑΡΔΑΜΙΤΣΙΑ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΜΕΖΟΝΕΤΑ</span><span class="highlight-tag">€1944/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -1525,12 +1466,12 @@
                     <div class="listing-header">
                         <div class="price">€280,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-21809</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΚΙΑΦΑ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΔΙΑΜΕΡΙΣΜΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -1556,7 +1497,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">98 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΚΙΑΦΑ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΔΙΑΜΕΡΙΣΜΑ</span><span class="highlight-tag">€2857/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -1580,12 +1521,12 @@
                     <div class="listing-header">
                         <div class="price">€275,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-20575</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΑΝΑΤΟΛΗ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΜΕΖΟΝΕΤΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -1611,7 +1552,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">211 sqm</span><span class="highlight-tag">4 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΑΝΑΤΟΛΗ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΜΕΖΟΝΕΤΑ</span><span class="highlight-tag">€1303/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -1635,12 +1576,12 @@
                     <div class="listing-header">
                         <div class="price">€155,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">Κ-19869</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΜΠΙΖΑΝΙ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΟΡΟΦΟΔΙΑΜΕΡΙΣΜΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -1666,7 +1607,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">110 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΜΠΙΖΑΝΙ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΟΡΟΦΟΔΙΑΜΕΡΙΣΜΑ</span><span class="highlight-tag">€1409/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -1690,12 +1631,12 @@
                     <div class="listing-header">
                         <div class="price">€285,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">2105494</div>
                             <span class="source-badge" style="background: #3498db;">Greek Estate</span>
                         </div>
                     </div>
 
                     <div class="location">Κέντρο,, Ανατολή</div>
+                    <div class="property-type">Μεζονέτα</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -1721,7 +1662,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">225 sqm</span><span class="highlight-tag">4 bedrooms (preferred!)</span><span class="highlight-tag">📍 Κέντρο,, Ανατολή</span><span class="highlight-tag">🏠 Μεζονέτα</span><span class="highlight-tag">€1267/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -1745,12 +1686,12 @@
                     <div class="listing-header">
                         <div class="price">€195,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">1052475</div>
                             <span class="source-badge" style="background: #3498db;">Greek Estate</span>
                         </div>
                     </div>
 
                     <div class="location">Κέντρο,, Ιωάννινα</div>
+                    <div class="property-type">Διαμέρισμα</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -1776,66 +1717,11 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">173 sqm</span><span class="highlight-tag">4 bedrooms (preferred!)</span><span class="highlight-tag">📍 Κέντρο,, Ιωάννινα</span><span class="highlight-tag">🏠 Διαμέρισμα</span><span class="highlight-tag">€1127/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
                         <a href="https://greekestate.eu/properties/1052475"
-                           target="_blank"
-                           class="view-button">View Property Details →</a>
-                        <div class="first-seen">First seen: 2026-02-09</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="listing">
-            <div class="listing-content">
-                <div class="listing-image">
-                    <img src="https://ilist-cdn.e-agents.cloud/appFol/appDetails/estatePhotos/fol1853625/0af83912529f43db9ab4411557769e9c-thumb.jpg"
-                         alt="Property 1853625"
-                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23adb5bd' font-size='18' dy='.3em'%3ENo Image%3C/text%3E%3C/svg%3E'">
-                </div>
-                <div class="listing-details">
-                    <div class="listing-header">
-                        <div class="price">€245,000<span class="new-badge">New Today</span></div>
-                        <div>
-                            <div class="property-id">1853625</div>
-                            <span class="source-badge" style="background: #3498db;">Greek Estate</span>
-                        </div>
-                    </div>
-
-                    <div class="location">Καβαλλάρι,, Ανατολικό Ζαγόρι</div>
-
-                    <div class="specs">
-                        <div class="spec">
-                            <div class="spec-icon">📐</div>
-                            <div class="spec-label">Size</div>
-                            <div class="spec-value">237 m²</div>
-                        </div>
-                        <div class="spec">
-                            <div class="spec-icon">💶</div>
-                            <div class="spec-label">Per m²</div>
-                            <div class="spec-value">€1,033</div>
-                        </div>
-                        <div class="spec">
-                            <div class="spec-icon">🛏️</div>
-                            <div class="spec-label">Bedrooms</div>
-                            <div class="spec-value">4</div>
-                        </div>
-                        <div class="spec">
-                            <div class="spec-icon">🚿</div>
-                            <div class="spec-label">Bathrooms</div>
-                            <div class="spec-value">1</div>
-                        </div>
-                    </div>
-
-                    <div class="highlights">
-                        <span class="highlight-tag">237 sqm</span><span class="highlight-tag">4 bedrooms (preferred!)</span><span class="highlight-tag">📍 Καβαλλάρι,, Ανατολικό Ζαγόρι</span><span class="highlight-tag">🏠 Μονοκατοικία</span><span class="highlight-tag">€1034/sqm</span>
-                    </div>
-
-                    <div class="view-link">
-                        <a href="https://greekestate.eu/properties/1853625"
                            target="_blank"
                            class="view-button">View Property Details →</a>
                         <div class="first-seen">First seen: 2026-02-09</div>
@@ -1855,12 +1741,12 @@
                     <div class="listing-header">
                         <div class="price">€350,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">2141838</div>
                             <span class="source-badge" style="background: #3498db;">Greek Estate</span>
                         </div>
                     </div>
 
                     <div class="location">Κέντρο,, Ανατολή</div>
+                    <div class="property-type">Πολυκατοικία/Κτίριο</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -1886,7 +1772,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">250 sqm</span><span class="highlight-tag">6 bedrooms (preferred!)</span><span class="highlight-tag">📍 Κέντρο,, Ανατολή</span><span class="highlight-tag">🏠 Πολυκατοικία/Κτίριο</span><span class="highlight-tag">€1400/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -1910,12 +1796,12 @@
                     <div class="listing-header">
                         <div class="price">€160,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">1052487</div>
                             <span class="source-badge" style="background: #3498db;">Greek Estate</span>
                         </div>
                     </div>
 
                     <div class="location">Καλλιθέα,, Ιωάννινα</div>
+                    <div class="property-type">Διαμέρισμα</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -1941,7 +1827,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">113 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 Καλλιθέα,, Ιωάννινα</span><span class="highlight-tag">🏠 Διαμέρισμα</span><span class="highlight-tag">✨ Has θέα</span><span class="highlight-tag">€1416/sqm</span>
+                        <span class="highlight-tag">✨ Has θέα</span>
                     </div>
 
                     <div class="view-link">
@@ -1965,12 +1851,12 @@
                     <div class="listing-header">
                         <div class="price">€243,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">2166524</div>
                             <span class="source-badge" style="background: #3498db;">Greek Estate</span>
                         </div>
                     </div>
 
                     <div class="location">Βοτανικός,, Ιωάννινα</div>
+                    <div class="property-type">Διαμέρισμα</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -1996,7 +1882,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">90 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 Βοτανικός,, Ιωάννινα</span><span class="highlight-tag">🏠 Διαμέρισμα</span><span class="highlight-tag">€2700/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -2020,12 +1906,12 @@
                     <div class="listing-header">
                         <div class="price">€320,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">1052463</div>
                             <span class="source-badge" style="background: #3498db;">Greek Estate</span>
                         </div>
                     </div>
 
                     <div class="location">Κέντρο,, Ιωάννινα</div>
+                    <div class="property-type">Μονοκατοικία</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -2051,7 +1937,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">300 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 Κέντρο,, Ιωάννινα</span><span class="highlight-tag">🏠 Μονοκατοικία</span><span class="highlight-tag">€1067/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -2075,12 +1961,12 @@
                     <div class="listing-header">
                         <div class="price">€170,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">1809077</div>
                             <span class="source-badge" style="background: #3498db;">Greek Estate</span>
                         </div>
                     </div>
 
                     <div class="location">Κέντρο,, Ιωάννινα</div>
+                    <div class="property-type">Διαμέρισμα</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -2106,7 +1992,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">110 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 Κέντρο,, Ιωάννινα</span><span class="highlight-tag">🏠 Διαμέρισμα</span><span class="highlight-tag">€1545/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -2130,12 +2016,12 @@
                     <div class="listing-header">
                         <div class="price">€160,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">1814814</div>
                             <span class="source-badge" style="background: #3498db;">Greek Estate</span>
                         </div>
                     </div>
 
                     <div class="location">Κέντρο,, Ιωάννινα</div>
+                    <div class="property-type">Διαμέρισμα</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -2161,7 +2047,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">92 sqm</span><span class="highlight-tag">2 bedrooms</span><span class="highlight-tag">📍 Κέντρο,, Ιωάννινα</span><span class="highlight-tag">🏠 Διαμέρισμα</span><span class="highlight-tag">€1739/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -2185,12 +2071,12 @@
                     <div class="listing-header">
                         <div class="price">€195,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">1330253</div>
                             <span class="source-badge" style="background: #3498db;">Greek Estate</span>
                         </div>
                     </div>
 
                     <div class="location">Κέντρο,, Ιωάννινα</div>
+                    <div class="property-type">Διαμέρισμα</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -2216,7 +2102,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">134 sqm</span><span class="highlight-tag">2 bedrooms</span><span class="highlight-tag">📍 Κέντρο,, Ιωάννινα</span><span class="highlight-tag">🏠 Διαμέρισμα</span><span class="highlight-tag">€1455/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -2240,12 +2126,12 @@
                     <div class="listing-header">
                         <div class="price">€200,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">1851212</div>
                             <span class="source-badge" style="background: #3498db;">Greek Estate</span>
                         </div>
                     </div>
 
                     <div class="location">Ελληνικό,, Κατσανοχώρια</div>
+                    <div class="property-type">Πολυκατοικία/Κτίριο</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -2271,7 +2157,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">187 sqm</span><span class="highlight-tag">4 bedrooms (preferred!)</span><span class="highlight-tag">📍 Ελληνικό,, Κατσανοχώρια</span><span class="highlight-tag">🏠 Πολυκατοικία/Κτίριο</span><span class="highlight-tag">€1070/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -2295,12 +2181,12 @@
                     <div class="listing-header">
                         <div class="price">€170,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">1493989</div>
                             <span class="source-badge" style="background: #3498db;">Greek Estate</span>
                         </div>
                     </div>
 
                     <div class="location">Τσεπέλοβο,, Τύμφη</div>
+                    <div class="property-type">Μονοκατοικία</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -2326,66 +2212,11 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">215 sqm</span><span class="highlight-tag">4 bedrooms (preferred!)</span><span class="highlight-tag">📍 Τσεπέλοβο,, Τύμφη</span><span class="highlight-tag">🏠 Μονοκατοικία</span><span class="highlight-tag">€791/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
                         <a href="https://greekestate.eu/properties/1493989"
-                           target="_blank"
-                           class="view-button">View Property Details →</a>
-                        <div class="first-seen">First seen: 2026-02-09</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="listing">
-            <div class="listing-content">
-                <div class="listing-image">
-                    <img src="https://ilist-cdn.e-agents.cloud/appFol/appDetails/estatePhotos/fol1052454/Thumb_a9e79a04-9b8f-4088-b2b7-09f681a30e25.jpeg"
-                         alt="Property 1052454"
-                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23adb5bd' font-size='18' dy='.3em'%3ENo Image%3C/text%3E%3C/svg%3E'">
-                </div>
-                <div class="listing-details">
-                    <div class="listing-header">
-                        <div class="price">€350,000<span class="new-badge">New Today</span></div>
-                        <div>
-                            <div class="property-id">1052454</div>
-                            <span class="source-badge" style="background: #3498db;">Greek Estate</span>
-                        </div>
-                    </div>
-
-                    <div class="location">Άνω Πεδινά,, Κεντρικό Ζαγόρι</div>
-
-                    <div class="specs">
-                        <div class="spec">
-                            <div class="spec-icon">📐</div>
-                            <div class="spec-label">Size</div>
-                            <div class="spec-value">478 m²</div>
-                        </div>
-                        <div class="spec">
-                            <div class="spec-icon">💶</div>
-                            <div class="spec-label">Per m²</div>
-                            <div class="spec-value">€732</div>
-                        </div>
-                        <div class="spec">
-                            <div class="spec-icon">🛏️</div>
-                            <div class="spec-label">Bedrooms</div>
-                            <div class="spec-value">5</div>
-                        </div>
-                        <div class="spec">
-                            <div class="spec-icon">🚿</div>
-                            <div class="spec-label">Bathrooms</div>
-                            <div class="spec-value">1</div>
-                        </div>
-                    </div>
-
-                    <div class="highlights">
-                        <span class="highlight-tag">478 sqm</span><span class="highlight-tag">5 bedrooms (preferred!)</span><span class="highlight-tag">📍 Άνω Πεδινά,, Κεντρικό Ζαγόρι</span><span class="highlight-tag">🏠 Πολυκατοικία/Κτίριο</span><span class="highlight-tag">€732/sqm</span>
-                    </div>
-
-                    <div class="view-link">
-                        <a href="https://greekestate.eu/properties/1052454"
                            target="_blank"
                            class="view-button">View Property Details →</a>
                         <div class="first-seen">First seen: 2026-02-09</div>
@@ -2405,12 +2236,12 @@
                     <div class="listing-header">
                         <div class="price">€295,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">1494400</div>
                             <span class="source-badge" style="background: #3498db;">Greek Estate</span>
                         </div>
                     </div>
 
                     <div class="location">Κέντρο,, Ιωάννινα</div>
+                    <div class="property-type">Διαμέρισμα</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -2436,7 +2267,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">105 sqm</span><span class="highlight-tag">2 bedrooms</span><span class="highlight-tag">📍 Κέντρο,, Ιωάννινα</span><span class="highlight-tag">🏠 Διαμέρισμα</span><span class="highlight-tag">€2810/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -2460,12 +2291,12 @@
                     <div class="listing-header">
                         <div class="price">€220,000<span class="new-badge">New Today</span></div>
                         <div>
-                            <div class="property-id">1052448</div>
                             <span class="source-badge" style="background: #3498db;">Greek Estate</span>
                         </div>
                     </div>
 
                     <div class="location">Καρδαμίτσια,, Ιωάννινα</div>
+                    <div class="property-type">Διαμέρισμα</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -2491,7 +2322,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">156 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 Καρδαμίτσια,, Ιωάννινα</span><span class="highlight-tag">🏠 Διαμέρισμα</span><span class="highlight-tag">€1410/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -2507,6 +2338,285 @@
         <div class="listing">
             <div class="listing-content">
                 <div class="listing-image">
+                    <img src="https://oikiarealestate.gr/wp-content/uploads/WPL/2926/thimg_20221230_110614_285x200.jpg"
+                         alt="Property 2926-%CE%9C%CE%BF%CE%BD%CE%BF%CE%BA%CE%B1%CF%84%CE%BF%CE%B9%CE%BA%CE%AF%CE%B1-3-%CE%A5%CF%80%CE%BD%CE%BF%CE%B4%CF%89%CE%BC%CE%AC%CF%84%CE%B9%CE%B1-1-%CE%A4%CE%BF%CF%85%CE%B1%CE%BB%CE%AD%CF%84%CE%B1-%CE%9B%CE%BF%CF%85%CF%84%CF%81%CF%8C-350000EUR"
+                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23adb5bd' font-size='18' dy='.3em'%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="listing-details">
+                    <div class="listing-header">
+                        <div class="price">€350,000<span class="new-badge">New Today</span></div>
+                        <div>
+                            <span class="source-badge" style="background: #9b59b6;">Oikia</span>
+                        </div>
+                    </div>
+
+                    <div class="location">Τσιφλικόπουλο, Ιωάννινα</div>
+                    <div class="property-type">Μονοκατοικ</div>
+
+                    <div class="specs">
+                        <div class="spec">
+                            <div class="spec-icon">📐</div>
+                            <div class="spec-label">Size</div>
+                            <div class="spec-value">205 m²</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-icon">💶</div>
+                            <div class="spec-label">Per m²</div>
+                            <div class="spec-value">€1,707</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-icon">🛏️</div>
+                            <div class="spec-label">Bedrooms</div>
+                            <div class="spec-value">3</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-icon">🚿</div>
+                            <div class="spec-label">Bathrooms</div>
+                            <div class="spec-value">None</div>
+                        </div>
+                    </div>
+
+                    <div class="highlights">
+                        
+                    </div>
+
+                    <div class="view-link">
+                        <a href="https://oikiarealestate.gr/properties/2926-%CE%9C%CE%BF%CE%BD%CE%BF%CE%BA%CE%B1%CF%84%CE%BF%CE%B9%CE%BA%CE%AF%CE%B1-3-%CE%A5%CF%80%CE%BD%CE%BF%CE%B4%CF%89%CE%BC%CE%AC%CF%84%CE%B9%CE%B1-1-%CE%A4%CE%BF%CF%85%CE%B1%CE%BB%CE%AD%CF%84%CE%B1-%CE%9B%CE%BF%CF%85%CF%84%CF%81%CF%8C-350000EUR/"
+                           target="_blank"
+                           class="view-button">View Property Details →</a>
+                        <div class="first-seen">First seen: 2026-02-09</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="listing">
+            <div class="listing-content">
+                <div class="listing-image">
+                    <img src="https://oikiarealestate.gr/wp-content/uploads/WPL/4901/thimg_εικόνα_Viber_2025-12-22_19-46-14-637_285x200.jpg"
+                         alt="Property 4901-%CE%94%CE%B9%CE%B1%CE%BC%CE%AD%CF%81%CE%B9%CF%83%CE%BC%CE%B1-4-%CE%94%CF%89%CE%BC%CE%AC%CF%84%CE%B9%CE%B1-3-%CE%A5%CF%80%CE%BD%CE%BF%CE%B4%CF%89%CE%BC%CE%AC%CF%84%CE%B9%CE%B1-2-%CE%A4%CE%BF%CF%85%CE%B1%CE%BB%CE%AD%CF%84%CE%B5%CF%82-%CE%9B%CE%BF%CF%85%CF%84%CF%81%CE%AC-323000EUR"
+                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23adb5bd' font-size='18' dy='.3em'%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="listing-details">
+                    <div class="listing-header">
+                        <div class="price">€323,000<span class="new-badge">New Today</span></div>
+                        <div>
+                            <span class="source-badge" style="background: #9b59b6;">Oikia</span>
+                        </div>
+                    </div>
+
+                    <div class="location">Βρυσούλα, Ιωάννινα</div>
+                    <div class="property-type">Διαμ</div>
+
+                    <div class="specs">
+                        <div class="spec">
+                            <div class="spec-icon">📐</div>
+                            <div class="spec-label">Size</div>
+                            <div class="spec-value">124 m²</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-icon">💶</div>
+                            <div class="spec-label">Per m²</div>
+                            <div class="spec-value">€2,604</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-icon">🛏️</div>
+                            <div class="spec-label">Bedrooms</div>
+                            <div class="spec-value">3</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-icon">🚿</div>
+                            <div class="spec-label">Bathrooms</div>
+                            <div class="spec-value">None</div>
+                        </div>
+                    </div>
+
+                    <div class="highlights">
+                        
+                    </div>
+
+                    <div class="view-link">
+                        <a href="https://oikiarealestate.gr/properties/4901-%CE%94%CE%B9%CE%B1%CE%BC%CE%AD%CF%81%CE%B9%CF%83%CE%BC%CE%B1-4-%CE%94%CF%89%CE%BC%CE%AC%CF%84%CE%B9%CE%B1-3-%CE%A5%CF%80%CE%BD%CE%BF%CE%B4%CF%89%CE%BC%CE%AC%CF%84%CE%B9%CE%B1-2-%CE%A4%CE%BF%CF%85%CE%B1%CE%BB%CE%AD%CF%84%CE%B5%CF%82-%CE%9B%CE%BF%CF%85%CF%84%CF%81%CE%AC-323000EUR/"
+                           target="_blank"
+                           class="view-button">View Property Details →</a>
+                        <div class="first-seen">First seen: 2026-02-09</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="listing">
+            <div class="listing-content">
+                <div class="listing-image">
+                    <img src="https://oikiarealestate.gr/wp-content/uploads/WPL/901/thimg_1792-oikiarealestate-9-_285x200.jpg"
+                         alt="Property 901-%CE%9C%CE%B5%CE%B6%CE%BF%CE%BD%CE%AD%CF%84%CE%B1-4-%CE%94%CF%89%CE%BC%CE%AC%CF%84%CE%B9%CE%B1-3-%CE%A5%CF%80%CE%BD%CE%BF%CE%B4%CF%89%CE%BC%CE%AC%CF%84%CE%B9%CE%B1-2-%CE%A4%CE%BF%CF%85%CE%B1%CE%BB%CE%AD%CF%84%CE%B5%CF%82-%CE%9B%CE%BF%CF%85%CF%84%CF%81%CE%AC-280000EUR"
+                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23adb5bd' font-size='18' dy='.3em'%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="listing-details">
+                    <div class="listing-header">
+                        <div class="price">€280,000<span class="new-badge">New Today</span></div>
+                        <div>
+                            <span class="source-badge" style="background: #9b59b6;">Oikia</span>
+                        </div>
+                    </div>
+
+                    <div class="location">Κέντρο- Ιωάννινα</div>
+                    <div class="property-type">Διαμ</div>
+
+                    <div class="specs">
+                        <div class="spec">
+                            <div class="spec-icon">📐</div>
+                            <div class="spec-label">Size</div>
+                            <div class="spec-value">100 m²</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-icon">💶</div>
+                            <div class="spec-label">Per m²</div>
+                            <div class="spec-value">€2,800</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-icon">🛏️</div>
+                            <div class="spec-label">Bedrooms</div>
+                            <div class="spec-value">3</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-icon">🚿</div>
+                            <div class="spec-label">Bathrooms</div>
+                            <div class="spec-value">None</div>
+                        </div>
+                    </div>
+
+                    <div class="highlights">
+                        
+                    </div>
+
+                    <div class="view-link">
+                        <a href="https://oikiarealestate.gr/properties/901-%CE%9C%CE%B5%CE%B6%CE%BF%CE%BD%CE%AD%CF%84%CE%B1-4-%CE%94%CF%89%CE%BC%CE%AC%CF%84%CE%B9%CE%B1-3-%CE%A5%CF%80%CE%BD%CE%BF%CE%B4%CF%89%CE%BC%CE%AC%CF%84%CE%B9%CE%B1-2-%CE%A4%CE%BF%CF%85%CE%B1%CE%BB%CE%AD%CF%84%CE%B5%CF%82-%CE%9B%CE%BF%CF%85%CF%84%CF%81%CE%AC-280000EUR/"
+                           target="_blank"
+                           class="view-button">View Property Details →</a>
+                        <div class="first-seen">First seen: 2026-02-09</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="listing">
+            <div class="listing-content">
+                <div class="listing-image">
+                    <img src="https://oikiarealestate.gr/wp-content/uploads/WPL/3772/thimg_426807316_362452886710412_284394555417674396_n_285x200.jpg"
+                         alt="Property 3772-%CE%9C%CE%B5%CE%B6%CE%BF%CE%BD%CE%AD%CF%84%CE%B1-2-%CE%A5%CF%80%CE%BD%CE%BF%CE%B4%CF%89%CE%BC%CE%AC%CF%84%CE%B9%CE%B1-2-%CE%A4%CE%BF%CF%85%CE%B1%CE%BB%CE%AD%CF%84%CE%B5%CF%82-%CE%9B%CE%BF%CF%85%CF%84%CF%81%CE%AC-270000EUR"
+                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23adb5bd' font-size='18' dy='.3em'%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="listing-details">
+                    <div class="listing-header">
+                        <div class="price">€270,000<span class="new-badge">New Today</span></div>
+                        <div>
+                            <span class="source-badge" style="background: #9b59b6;">Oikia</span>
+                        </div>
+                    </div>
+
+                    <div class="location">Λ. Δωδώνης, Ιωάννινα</div>
+                    <div class="property-type">Μεζον</div>
+
+                    <div class="specs">
+                        <div class="spec">
+                            <div class="spec-icon">📐</div>
+                            <div class="spec-label">Size</div>
+                            <div class="spec-value">136 m²</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-icon">💶</div>
+                            <div class="spec-label">Per m²</div>
+                            <div class="spec-value">€1,985</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-icon">🛏️</div>
+                            <div class="spec-label">Bedrooms</div>
+                            <div class="spec-value">2</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-icon">🚿</div>
+                            <div class="spec-label">Bathrooms</div>
+                            <div class="spec-value">None</div>
+                        </div>
+                    </div>
+
+                    <div class="highlights">
+                        
+                    </div>
+
+                    <div class="view-link">
+                        <a href="https://oikiarealestate.gr/properties/3772-%CE%9C%CE%B5%CE%B6%CE%BF%CE%BD%CE%AD%CF%84%CE%B1-2-%CE%A5%CF%80%CE%BD%CE%BF%CE%B4%CF%89%CE%BC%CE%AC%CF%84%CE%B9%CE%B1-2-%CE%A4%CE%BF%CF%85%CE%B1%CE%BB%CE%AD%CF%84%CE%B5%CF%82-%CE%9B%CE%BF%CF%85%CF%84%CF%81%CE%AC-270000EUR/"
+                           target="_blank"
+                           class="view-button">View Property Details →</a>
+                        <div class="first-seen">First seen: 2026-02-09</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="listing">
+            <div class="listing-content">
+                <div class="listing-image">
+                    <img src="https://oikiarealestate.gr/wp-content/uploads/WPL/3759/thimg_20240203_130324_285x200.jpg"
+                         alt="Property 3759-%CE%9C%CE%BF%CE%BD%CE%BF%CE%BA%CE%B1%CF%84%CE%BF%CE%B9%CE%BA%CE%AF%CE%B1-2-%CE%A5%CF%80%CE%BD%CE%BF%CE%B4%CF%89%CE%BC%CE%AC%CF%84%CE%B9%CE%B1-2-%CE%A4%CE%BF%CF%85%CE%B1%CE%BB%CE%AD%CF%84%CE%B5%CF%82-%CE%9B%CE%BF%CF%85%CF%84%CF%81%CE%AC-260000EUR"
+                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23adb5bd' font-size='18' dy='.3em'%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="listing-details">
+                    <div class="listing-header">
+                        <div class="price">€260,000<span class="new-badge">New Today</span></div>
+                        <div>
+                            <span class="source-badge" style="background: #9b59b6;">Oikia</span>
+                        </div>
+                    </div>
+
+                    <div class="location">Σκλίβανη, Ιωάννινα</div>
+                    <div class="property-type">Μονοκατοικ</div>
+
+                    <div class="specs">
+                        <div class="spec">
+                            <div class="spec-icon">📐</div>
+                            <div class="spec-label">Size</div>
+                            <div class="spec-value">132 m²</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-icon">💶</div>
+                            <div class="spec-label">Per m²</div>
+                            <div class="spec-value">€1,969</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-icon">🛏️</div>
+                            <div class="spec-label">Bedrooms</div>
+                            <div class="spec-value">2</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-icon">🚿</div>
+                            <div class="spec-label">Bathrooms</div>
+                            <div class="spec-value">None</div>
+                        </div>
+                    </div>
+
+                    <div class="highlights">
+                        
+                    </div>
+
+                    <div class="view-link">
+                        <a href="https://oikiarealestate.gr/properties/3759-%CE%9C%CE%BF%CE%BD%CE%BF%CE%BA%CE%B1%CF%84%CE%BF%CE%B9%CE%BA%CE%AF%CE%B1-2-%CE%A5%CF%80%CE%BD%CE%BF%CE%B4%CF%89%CE%BC%CE%AC%CF%84%CE%B9%CE%B1-2-%CE%A4%CE%BF%CF%85%CE%B1%CE%BB%CE%AD%CF%84%CE%B5%CF%82-%CE%9B%CE%BF%CF%85%CF%84%CF%81%CE%AC-260000EUR/"
+                           target="_blank"
+                           class="view-button">View Property Details →</a>
+                        <div class="first-seen">First seen: 2026-02-09</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider earlier">
+            <h2>📋 Earlier Listings</h2>
+        </div>
+
+        <div class="listing">
+            <div class="listing-content">
+                <div class="listing-image">
                     <img src="https://www.vrespiti.gr/u_photos/K--908274710s.jpg"
                          alt="Property Κ-20494"
                          onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23adb5bd' font-size='18' dy='.3em'%3ENo Image%3C/text%3E%3C/svg%3E'">
@@ -2515,12 +2625,12 @@
                     <div class="listing-header">
                         <div class="price">€280,000</div>
                         <div>
-                            <div class="property-id">Κ-20494</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΑΝΑΤΟΛΗ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΔΙΑΜΕΡΙΣΜΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -2546,7 +2656,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">99 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΑΝΑΤΟΛΗ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΔΙΑΜΕΡΙΣΜΑ</span><span class="highlight-tag">€2828/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">
@@ -2570,12 +2680,12 @@
                     <div class="listing-header">
                         <div class="price">€235,000</div>
                         <div>
-                            <div class="property-id">Κ-22934</div>
                             <span class="source-badge" style="background: #e74c3c;">Vrespiti</span>
                         </div>
                     </div>
 
                     <div class="location">ΚΕΝΤΡΟ - ΙΩΑΝΝΙΝΑ, ΙΩΑΝΝΙΝΑ</div>
+                    <div class="property-type">ΔΙΑΜΕΡΙΣΜΑ</div>
 
                     <div class="specs">
                         <div class="spec">
@@ -2601,7 +2711,7 @@
                     </div>
 
                     <div class="highlights">
-                        <span class="highlight-tag">93 sqm</span><span class="highlight-tag">3 bedrooms (preferred!)</span><span class="highlight-tag">📍 ΚΕΝΤΡΟ - ΙΩΑΝΝΙΝΑ, ΙΩΑΝΝΙΝΑ</span><span class="highlight-tag">🏠 ΔΙΑΜΕΡΙΣΜΑ</span><span class="highlight-tag">€2527/sqm</span>
+                        
                     </div>
 
                     <div class="view-link">

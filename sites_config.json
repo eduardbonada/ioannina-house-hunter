@@ -13,7 +13,13 @@
       "name": "Vrespiti",
       "url": "https://www.vrespiti.gr/search?purpose=1&category=1&area=655933595&bedroomsmin=2&bedroomsmax=&sizemin=85&sizemax=&pricemin=150000&pricemax=350000&cyearmin=&cyearmax=&floormin=&floormax=&partner=&lng=&p=1",
       "enabled": true,
-      "scraping_method": "http"      
+      "scraping_method": "http"
+    },
+    {
+      "name": "Oikia",
+      "url": "https://oikiarealestate.gr/properties/?widget_id=2&kind=0&sf_select_sp_available=1&sf_unit_price=150&sf_unit_living_area=2&sf_select_listing=9&sf_min_price=150000&sf_max_price=350000&sf_tmin_bedrooms=2&sf_tmax_bedrooms=3",
+      "enabled": true,
+      "scraping_method": "http"
     }
   ],
   "notifications": {
