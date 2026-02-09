@@ -405,8 +405,8 @@ def generate_html_report(output_path=None):
     showing_new_section = False
 
     for idx, listing in enumerate(listings):
-        price = listing.get('price', 0)
-        price_formatted = f"€{price:,}"
+        price = listing.get('price') or 0
+        price_formatted = f"€{price:,}" if price else "Price not listed"
         location = listing.get('location', 'Unknown location')
         property_id = listing.get('property_id', 'N/A')
         size = listing.get('size_sqm', 0)
@@ -418,7 +418,7 @@ def generate_html_report(output_path=None):
         property_type = listing.get('property_type', '')
 
         # Calculate price per sqm
-        price_per_sqm = int(price / size) if size > 0 else 0
+        price_per_sqm = int(price / size) if (price and size and size > 0) else 0
 
         # Determine source from URL
         if 'greekestate' in url.lower():
@@ -430,6 +430,9 @@ def generate_html_report(output_path=None):
         elif 'oikiarealestate' in url.lower():
             source_name = 'Oikia'
             source_color = '#9b59b6'
+        elif 'skourashome' in url.lower():
+            source_name = 'Skouras'
+            source_color = '#2ecc71'
         else:
             source_name = 'Unknown'
             source_color = '#95a5a6'

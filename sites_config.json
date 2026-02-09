@@ -20,6 +20,12 @@
       "url": "https://oikiarealestate.gr/properties/?widget_id=2&kind=0&sf_select_sp_available=1&sf_unit_price=150&sf_unit_living_area=2&sf_select_listing=9&sf_min_price=150000&sf_max_price=350000&sf_tmin_bedrooms=2&sf_tmax_bedrooms=3",
       "enabled": true,
       "scraping_method": "http"
+    },
+    {
+      "name": "Skouras",
+      "url": "https://www.skourashome.gr/el/properties?areas=167&aim=1&category=1&subCategory=1,3,4&priceFrom=150000&priceTo=350000&sqrMetersFrom=85&roomsFrom=2&roomsTo=2",
+      "enabled": true,
+      "scraping_method": "http"
     }
   ],
   "notifications": {

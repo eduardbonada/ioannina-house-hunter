@@ -41,6 +41,8 @@ def generate_report(listings):
             site_name = 'Vrespiti'
         elif 'oikiarealestate' in url:
             site_name = 'Oikia'
+        elif 'skourashome' in url:
+            site_name = 'Skouras'
         else:
             site_name = 'Unknown Site'
 

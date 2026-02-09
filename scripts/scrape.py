@@ -16,6 +16,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from scripts.scrapers.greek_estate import scrape_greek_estate
 from scripts.scrapers.vrespiti import scrape_vrespiti
 from scripts.scrapers.oikia import scrape_oikia
+from scripts.scrapers.skouras import scrape_skouras
 from scripts.utils.state_manager import StateManager
 from scripts.utils.filters import matches_criteria
 from scripts.utils.reporter import generate_report, generate_html_report_from_state
@@ -55,6 +56,8 @@ def main():
                 listings = scrape_vrespiti(site['url'])
             elif site['name'] == 'Oikia':
                 listings = scrape_oikia(site['url'])
+            elif site['name'] == 'Skouras':
+                listings = scrape_skouras(site['url'])
             else:
                 print(f"⚠️  No scraper implemented for {site['name']}")
                 continue
