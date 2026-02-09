@@ -1,0 +1,65 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-02-08",
+  "must_have": {
+    "property_types": [
+      "flat",
+      "apartment",
+      "διαμέρισμα",
+      "διαμερισμα",
+      "οροφοδιαμέρισμα",
+      "οροφοδιαμερισμα",
+      "maisonette",
+      "μεζονέτα",
+      "μεζονετα",
+      "duplex",
+      "ντουπλεξ"
+    ],
+    "price_min": 150000,
+    "price_max": 350000,
+    "size_min": 90,
+    "bedrooms_min": 2,
+    "year_built_min": 2005
+  },
+  "preferred": {
+    "keywords": [
+      "storage",
+      "αποθήκη",
+      "garden",
+      "κήπος",
+      "view",
+      "θέα",
+      "parking",
+      "θέση",
+      "πάρκινγκ"
+    ]
+  },
+  "location_blacklist": [
+    "stavraki",
+    "σταυρακι",
+    "katsika",
+    "κατσικα",
+    "pedini",
+    "πεδινη",
+    "ampelia",
+    "αμπελια",
+    "amfithea",
+    "αμφιθεα",
+    "konitsa",
+    "κονιτσα",
+    "kato neoxoropoulo",
+    "κατω νεοχωροπουλο",
+    "neoxoropoulo",
+    "νεοχωροπουλο"
+  ],
+  "notes": {
+    "property_types": "Property types to look for. Include Greek and English variants.",
+    "price_min": "Minimum price in EUR",
+    "price_max": "Maximum price in EUR",
+    "size_min": "Minimum size in square meters",
+    "bedrooms_min": "Minimum number of bedrooms (3+ bedrooms get highlighted as 'preferred')",
+    "year_built_min": "Minimum construction year (currently not enforced by scrapers)",
+    "keywords": "Preferred features to highlight in reports",
+    "location_blacklist": "Locations to exclude from reports. Listings in these areas will be seen but NOT reported. Include both Greek and English variants."
+  }
+}

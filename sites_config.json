@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-02-08",
+  "sites": [
+    {
+      "name": "Greek Estate",
+      "url": "https://greekestate.eu/el/properties?areas=167&aim=1&category=1&priceFrom=150000&priceTo=350000&sqrMetersFrom=85&roomsFrom=2",
+      "enabled": true,
+      "scraping_method": "http"
+    }
+    ,
+    {
+      "name": "Vrespiti",
+      "url": "https://www.vrespiti.gr/search?purpose=1&category=1&area=655933595&bedroomsmin=2&bedroomsmax=&sizemin=85&sizemax=&pricemin=150000&pricemax=350000&cyearmin=&cyearmax=&floormin=&floormax=&partner=&lng=&p=1",
+      "enabled": true,
+      "scraping_method": "http"      
+    }
+  ],
+  "notifications": {
+    "min_interesting_listings": 1,
+    "report_even_if_no_new": false
+  }
+}
