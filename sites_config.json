@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2025-02-08",
+  "last_updated": "2026-02-11",
   "sites": [
     {
       "name": "Greek Estate",
@@ -24,6 +24,12 @@
     {
       "name": "Skouras",
       "url": "https://www.skourashome.gr/el/properties?areas=167&aim=1&category=1&subCategory=1,3,4&priceFrom=150000&priceTo=350000&sqrMetersFrom=85&roomsFrom=2&roomsTo=2",
+      "enabled": true,
+      "scraping_method": "http"
+    },
+    {
+      "name": "estateland",
+      "url": "https://www.estateland.gr/el/akinita/anazitisi?listingType=sale&category=residential&region=167&roomsLow=2&priceLow=150000&priceHigh=350000&livingAreaLow=85&livingAreaHigh=&myCode=",
       "enabled": true,
       "scraping_method": "http"
     }

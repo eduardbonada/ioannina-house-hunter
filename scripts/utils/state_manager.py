@@ -77,10 +77,36 @@ class StateManager:
         }
 
     def update_last_checked(self, listing):
-        """Update last_checked timestamp for existing listing"""
+        """Update last_checked timestamp and other fields for existing listing"""
         listing_hash = listing['hash']
         if listing_hash in self.seen_listings:
-            self.seen_listings[listing_hash]['last_checked'] = datetime.now().strftime('%Y-%m-%d')
+            old_listing = self.seen_listings[listing_hash]
+
+            # Always update last_checked
+            old_listing['last_checked'] = datetime.now().strftime('%Y-%m-%d')
+
+            # Update fields that were missing or have changed (but don't trigger "new" notification)
+            # This handles cases where data extraction improved or fields were initially missing
+            if listing.get('price') and not old_listing.get('price'):
+                old_listing['price'] = listing.get('price')
+
+            if listing.get('size_sqm') and not old_listing.get('size_sqm'):
+                old_listing['size_sqm'] = listing.get('size_sqm')
+
+            if listing.get('bedrooms') and not old_listing.get('bedrooms'):
+                old_listing['bedrooms'] = listing.get('bedrooms')
+
+            if listing.get('bathrooms') and not old_listing.get('bathrooms'):
+                old_listing['bathrooms'] = listing.get('bathrooms')
+
+            if listing.get('photo_url') and not old_listing.get('photo_url'):
+                old_listing['photo_url'] = listing.get('photo_url')
+
+            if listing.get('location') and not old_listing.get('location'):
+                old_listing['location'] = listing.get('location')
+
+            if listing.get('property_type') and not old_listing.get('property_type'):
+                old_listing['property_type'] = listing.get('property_type')
 
     def mark_as_reported(self, listing):
         """Mark listing as reported"""

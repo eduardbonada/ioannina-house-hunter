@@ -433,6 +433,9 @@ def generate_html_report(output_path=None):
         elif 'skourashome' in url.lower():
             source_name = 'Skouras'
             source_color = '#2ecc71'
+        elif 'estateland' in url.lower():
+            source_name = 'Estateland'
+            source_color = '#f39c12'
         else:
             source_name = 'Unknown'
             source_color = '#95a5a6'

@@ -262,6 +262,7 @@ def parse_number(text):
 
 
 def generate_listing_hash(listing):
-    """Generate unique hash for listing based on URL and key attributes"""
-    hash_string = f"{listing.get('url', '')}_{listing.get('property_id', '')}_{listing.get('price', '')}"
+    """Generate unique hash for listing based on URL and property ID only"""
+    # Don't include price in hash - we want to detect price changes, not create new entries
+    hash_string = f"{listing.get('url', '')}_{listing.get('property_id', '')}"
     return hashlib.md5(hash_string.encode()).hexdigest()
