@@ -102,11 +102,17 @@ class StateManager:
             if listing.get('photo_url') and not old_listing.get('photo_url'):
                 old_listing['photo_url'] = listing.get('photo_url')
 
-            if listing.get('location') and not old_listing.get('location'):
+            # Update location if it was missing or was "Unknown"
+            if listing.get('location') and (not old_listing.get('location') or old_listing.get('location') == 'Unknown'):
                 old_listing['location'] = listing.get('location')
 
-            if listing.get('property_type') and not old_listing.get('property_type'):
+            # Update property_type if it was missing or was "Unknown"
+            if listing.get('property_type') and (not old_listing.get('property_type') or old_listing.get('property_type') == 'Unknown'):
                 old_listing['property_type'] = listing.get('property_type')
+
+            # Update title if it was missing or was "Unknown"
+            if listing.get('title') and (not old_listing.get('title') or old_listing.get('title') == 'Unknown'):
+                old_listing['title'] = listing.get('title')
 
     def mark_as_reported(self, listing):
         """Mark listing as reported"""

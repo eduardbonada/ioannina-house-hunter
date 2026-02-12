@@ -17,23 +17,50 @@ def generate_html_report(output_path=None):
         output_path: Optional custom output path. Defaults to reports/all_listings.html
     """
     # Load reported listings
-    state_path = Path(__file__).parent.parent / "state" / "reported_listings.json"
+    reported_path = Path(__file__).parent.parent / "state" / "reported_listings.json"
+    seen_path = Path(__file__).parent.parent / "state" / "seen_listings.json"
 
     try:
-        with open(state_path, 'r', encoding='utf-8') as f:
-            listings_data = json.load(f)
+        with open(reported_path, 'r', encoding='utf-8') as f:
+            reported_data = json.load(f)
     except FileNotFoundError:
         print("❌ No reported listings found.")
         return None
 
-    if not listings_data:
+    # Load seen listings to get latest data
+    try:
+        with open(seen_path, 'r', encoding='utf-8') as f:
+            seen_data = json.load(f)
+    except FileNotFoundError:
+        seen_data = {}
+
+    if not reported_data:
         print("❌ No listings to display.")
         return None
 
-    # Convert to list and sort by price (ascending)
+    # Convert to list and merge with latest data from seen_listings
     listings = []
-    for listing_hash, listing in listings_data.items():
+    for listing_hash, reported_listing in reported_data.items():
+        # Start with reported listing
+        listing = reported_listing.copy()
         listing['hash'] = listing_hash
+
+        # Merge with latest data from seen_listings if available
+        if listing_hash in seen_data:
+            seen_listing = seen_data[listing_hash]
+            # Update with latest data, keeping reported_date from reported_listing
+            listing.update({
+                'price': seen_listing.get('price') or listing.get('price'),
+                'location': seen_listing.get('location') or listing.get('location'),
+                'size_sqm': seen_listing.get('size_sqm') or listing.get('size_sqm'),
+                'bedrooms': seen_listing.get('bedrooms') or listing.get('bedrooms'),
+                'bathrooms': seen_listing.get('bathrooms') or listing.get('bathrooms'),
+                'property_type': seen_listing.get('property_type') or listing.get('property_type'),
+                'title': seen_listing.get('title') or listing.get('title'),
+                'photo_url': seen_listing.get('photo_url') or listing.get('photo_url'),
+                'last_checked': seen_listing.get('last_checked'),
+            })
+
         listings.append(listing)
 
     # Sort by first_seen date (newest first)
@@ -395,7 +422,7 @@ def generate_html_report(output_path=None):
             </div>
             <div class="stat-item new-today">
                 <h2>{new_today}</h2>
-                <p>New Listings Today</p>
+                <p>New Listings</p>
             </div>
         </div>
 """
@@ -436,6 +463,12 @@ def generate_html_report(output_path=None):
         elif 'estateland' in url.lower():
             source_name = 'Estateland'
             source_color = '#f39c12'
+        elif 'gartzonikashome' in url.lower():
+            source_name = 'Gartzonikas'
+            source_color = '#1abc9c'
+        elif 'gikaispiti' in url.lower():
+            source_name = 'Gikaispiti'
+            source_color = '#e67e22'
         else:
             source_name = 'Unknown'
             source_color = '#95a5a6'
@@ -443,7 +476,7 @@ def generate_html_report(output_path=None):
         # Check if listing is new (today)
         today = datetime.now().strftime('%Y-%m-%d')
         is_new = first_seen == today
-        new_badge = '<span class="new-badge">New Today</span>' if is_new else ''
+        new_badge = '<span class="new-badge">New</span>' if is_new else ''
 
         # Get highlights
         highlights = listing.get('highlights', [])
@@ -454,7 +487,7 @@ def generate_html_report(output_path=None):
         if is_new and not showing_new_section:
             section_html = """
         <div class="section-divider new-today">
-            <h2>🌟 New Listings Today</h2>
+            <h2>🌟 New Listings</h2>
         </div>
 """
             showing_new_section = True

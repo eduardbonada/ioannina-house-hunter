@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-02-11",
+  "last_updated": "2026-02-12",
   "sites": [
     {
       "name": "Greek Estate",
@@ -30,6 +30,18 @@
     {
       "name": "estateland",
       "url": "https://www.estateland.gr/el/akinita/anazitisi?listingType=sale&category=residential&region=167&roomsLow=2&priceLow=150000&priceHigh=350000&livingAreaLow=85&livingAreaHigh=&myCode=",
+      "enabled": true,
+      "scraping_method": "http"
+    },
+    {
+      "name": "Gartzonikas",
+      "url": "https://gartzonikashome.com/%ce%b1%cf%80%ce%bf%cf%84%ce%b5%ce%bb%ce%ad%cf%83%ce%bc%ce%b1%cf%84%ce%b1-%ce%b1%ce%bd%ce%b1%ce%b6%ce%ae%cf%84%ce%b7%cf%83%ce%b7%cf%82/?status%5B%5D=%25cf%2580%25cf%258e%25ce%25bb%25ce%25b7%25cf%2583%25ce%25b7&location%5B%5D=%25ce%25b9%25cf%2589%25ce%25ac%25ce%25bd%25ce%25bd%25ce%25b9%25ce%25bd%25ce%25b1&property_id=&bedrooms=3&bathrooms=&min-area=85&max-area=&min-price=100000&max-price=300000",
+      "enabled": true,
+      "scraping_method": "selenium"
+    },
+    {
+      "name": "Gikaispiti",
+      "url": "https://www.gikaispiti.gr/results.php?filter_int_to=1&filter_location%5B%5D=N167&filter_location%5B%5D=&filter_location%5B%5D=&filter_category%5B%5D=1&filter_subcategory%5B%5D=&filter_price_from=150000&filter_price_to=300000&filter_area_from=85&filter_area_to=&filter_bedrooms=2&filter_floor=&filter_heat=",
       "enabled": true,
       "scraping_method": "http"
     }
