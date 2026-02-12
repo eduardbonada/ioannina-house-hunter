@@ -88,27 +88,29 @@ def generate_html_report(output_path=None):
 
         body {{
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: #f8f9fa;
-            color: #333;
+            background: #0d1117;
+            color: #c9d1d9;
             line-height: 1.6;
         }}
 
         .header {{
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #161b22;
             color: white;
             padding: 2rem;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom: 1px solid #30363d;
         }}
 
         .header h1 {{
             font-size: 2rem;
             margin-bottom: 0.5rem;
+            color: #c9d1d9;
         }}
 
         .header .subtitle {{
-            opacity: 0.9;
+            opacity: 0.7;
             font-size: 1.1rem;
+            color: #8b949e;
         }}
 
         .container {{
@@ -117,18 +119,48 @@ def generate_html_report(output_path=None):
             padding: 0 1rem;
         }}
 
+        .stats {{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }}
+
+        .stat-item {{
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }}
+
+        .stat-item h2 {{
+            font-size: 2.5rem;
+            color: #58a6ff;
+            margin-bottom: 0.5rem;
+        }}
+
+        .stat-item.new-today h2 {{
+            color: #3fb950;
+        }}
+
+        .stat-item p {{
+            color: #8b949e;
+            font-size: 1.1rem;
+        }}
+
         .listing {{
-            background: white;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 8px;
             overflow: hidden;
             margin-bottom: 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease, border-color 0.2s ease;
         }}
 
         .listing:hover {{
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-color: #58a6ff;
         }}
 
         .listing-content {{
@@ -140,7 +172,7 @@ def generate_html_report(output_path=None):
             flex: 0 0 400px;
             aspect-ratio: 4 / 3;
             overflow: hidden;
-            background: #e9ecef;
+            background: #0d1117;
         }}
 
         .listing-image img {{
@@ -162,22 +194,23 @@ def generate_html_report(output_path=None):
             align-items: flex-start;
             margin-bottom: 1rem;
             padding-bottom: 1rem;
-            border-bottom: 2px solid #f0f0f0;
+            border-bottom: 1px solid #21262d;
         }}
 
         .price {{
             font-size: 2rem;
             font-weight: bold;
-            color: #667eea;
+            color: #58a6ff;
         }}
 
         .property-id {{
             display: inline-block;
-            background: #f0f0f0;
+            background: transparent;
+            border: 1px solid #30363d;
             padding: 0.4rem 0.8rem;
-            border-radius: 20px;
+            border-radius: 6px;
             font-size: 0.85rem;
-            color: #666;
+            color: #8b949e;
             font-weight: 500;
             margin-right: 0.5rem;
             margin-bottom: 0.25rem;
@@ -185,7 +218,7 @@ def generate_html_report(output_path=None):
 
         .location {{
             font-size: 1.1rem;
-            color: #495057;
+            color: #8b949e;
             margin-bottom: 0.5rem;
             font-weight: 500;
         }}
@@ -196,16 +229,13 @@ def generate_html_report(output_path=None):
 
         .property-type {{
             display: inline-block;
-            font-size: 1.1rem;
-            color: #495057;
-            background: white;
-            padding: 0;
+            background: transparent;
+            color: #58a6ff;
+            border: 1px solid #58a6ff;
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
             margin-bottom: 1rem;
-            font-weight: 500;
-        }}
-
-        .property-type::before {{
-            content: "🏠 ";
         }}
 
         .specs {{
@@ -214,8 +244,9 @@ def generate_html_report(output_path=None):
             gap: 1rem;
             margin: 1rem 0;
             padding: 1rem;
-            background: #f8f9fa;
-            border-radius: 6px;
+            background: transparent;
+            border-top: 1px solid #21262d;
+            border-radius: 0;
         }}
 
         .spec {{
@@ -229,7 +260,7 @@ def generate_html_report(output_path=None):
 
         .spec-label {{
             font-size: 0.75rem;
-            color: #6c757d;
+            color: #8b949e;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }}
@@ -237,7 +268,7 @@ def generate_html_report(output_path=None):
         .spec-value {{
             font-weight: bold;
             font-size: 1.1rem;
-            color: #212529;
+            color: #c9d1d9;
         }}
 
         .highlights {{
@@ -247,8 +278,9 @@ def generate_html_report(output_path=None):
 
         .highlight-tag {{
             display: inline-block;
-            background: #e7f3ff;
-            color: #0066cc;
+            background: transparent;
+            border: 1px solid #58a6ff;
+            color: #58a6ff;
             padding: 0.4rem 0.8rem;
             border-radius: 15px;
             margin: 0.25rem;
@@ -258,120 +290,68 @@ def generate_html_report(output_path=None):
         .view-link {{
             margin-top: 1rem;
             padding-top: 1rem;
-            border-top: 1px solid #e9ecef;
+            border-top: 1px solid #21262d;
         }}
 
         .view-button {{
             display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 0.8rem 1.5rem;
+            background: transparent;
+            color: #58a6ff;
+            border: 1px solid #58a6ff;
+            padding: 0.6rem 1.2rem;
             border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
-            transition: transform 0.2s ease;
+            transition: background 0.2s ease, color 0.2s ease;
             font-size: 0.95rem;
         }}
 
         .view-button:hover {{
-            transform: scale(1.05);
+            background: #58a6ff;
+            color: #0d1117;
         }}
 
         .first-seen {{
             font-size: 0.85rem;
-            color: #6c757d;
+            color: #8b949e;
             margin-top: 0.5rem;
         }}
 
-        .stats {{
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }}
-
-        .stat-item {{
-            text-align: center;
-        }}
-
-        .stat-item h2 {{
-            font-size: 3rem;
-            color: #667eea;
-            margin-bottom: 0.5rem;
-        }}
-
-        .stat-item.new-today h2 {{
-            color: #28a745;
-        }}
-
-        .stat-item p {{
-            color: #6c757d;
-            font-size: 1.1rem;
-        }}
-
         .section-divider {{
-            background: white;
-            padding: 1.5rem 2rem;
-            margin: 2rem 0;
-            border-radius: 8px;
             text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-left: 4px solid #667eea;
+            margin: 3rem 0 2rem;
+            padding: 1rem;
+            background: transparent;
+            border: 1px solid #30363d;
+            border-radius: 8px;
         }}
 
         .section-divider h2 {{
+            color: #c9d1d9;
             font-size: 1.5rem;
-            color: #667eea;
             margin: 0;
             font-weight: 600;
         }}
 
-        .section-divider.new-today {{
-            border-left-color: #28a745;
-        }}
-
-        .section-divider.new-today h2 {{
-            color: #28a745;
-        }}
-
-        .section-divider.earlier {{
-            border-left-color: #6c757d;
-        }}
-
-        .section-divider.earlier h2 {{
-            color: #6c757d;
-        }}
-
-        .stats p {{
-            color: #6c757d;
-            font-size: 1.1rem;
-        }}
-
         .new-badge {{
-            display: inline-block;
-            background: #28a745;
-            color: white;
-            padding: 0.3rem 0.6rem;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            margin-left: 0.5rem;
-            text-transform: uppercase;
+            background: transparent;
+            color: #3fb950;
+            border: 1px solid #3fb950;
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 1rem;
         }}
 
         .source-badge {{
             display: inline-block;
-            color: white;
-            padding: 0.25rem 0.6rem;
-            border-radius: 4px;
-            font-size: 0.7rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            background: transparent;
+            border: 1px solid;
         }}
 
         @media (max-width: 968px) {{
@@ -514,7 +494,7 @@ def generate_html_report(output_path=None):
                     <div class="listing-header">
                         <div class="price">{price_formatted}{new_badge}</div>
                         <div>
-                            <span class="source-badge" style="background: {source_color};">{source_name}</span>
+                            <span class="source-badge" style="border-color: {source_color}; color: {source_color};">{source_name}</span>
                         </div>
                     </div>
 
