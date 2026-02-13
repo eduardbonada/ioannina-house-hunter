@@ -8,8 +8,13 @@ import hashlib
 import re
 import time
 from datetime import datetime
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+try:
+    import undetected_chromedriver as uc
+    USE_UNDETECTED = True
+except ImportError:
+    from selenium import webdriver
+    from selenium.webdriver.chrome.options import Options
+    USE_UNDETECTED = False
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -29,25 +34,34 @@ def scrape_mesitikaioan(url):
     listings = []
 
     try:
-        # Set up Selenium with Chrome in headless mode with better bot detection evasion
-        chrome_options = Options()
-        chrome_options.add_argument('--headless=new')
-        chrome_options.add_argument('--no-sandbox')
-        chrome_options.add_argument('--disable-dev-shm-usage')
-        chrome_options.add_argument('--disable-gpu')
-        chrome_options.add_argument('--window-size=1920,1080')
-        chrome_options.add_argument('--disable-blink-features=AutomationControlled')
-        chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
-        chrome_options.add_experimental_option('useAutomationExtension', False)
-        chrome_options.add_argument('user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
+        # Use undetected-chromedriver to bypass CAPTCHA/bot detection
+        if USE_UNDETECTED:
+            print("   Using undetected-chromedriver...")
+            options = uc.ChromeOptions()
+            options.add_argument('--headless=new')
+            options.add_argument('--no-sandbox')
+            driver = uc.Chrome(options=options, use_subprocess=True)
+        else:
+            # Fallback to regular Selenium with bot evasion
+            print("   Using regular Selenium (install undetected-chromedriver for better results)...")
+            chrome_options = Options()
+            chrome_options.add_argument('--headless=new')
+            chrome_options.add_argument('--no-sandbox')
+            chrome_options.add_argument('--disable-dev-shm-usage')
+            chrome_options.add_argument('--disable-gpu')
+            chrome_options.add_argument('--window-size=1920,1080')
+            chrome_options.add_argument('--disable-blink-features=AutomationControlled')
+            chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+            chrome_options.add_experimental_option('useAutomationExtension', False)
+            chrome_options.add_argument('user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
 
-        driver = webdriver.Chrome(options=chrome_options)
+            driver = webdriver.Chrome(options=chrome_options)
 
-        # Execute CDP commands to hide webdriver
-        driver.execute_cdp_cmd('Network.setUserAgentOverride', {
-            "userAgent": 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-        })
-        driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+            # Execute CDP commands to hide webdriver
+            driver.execute_cdp_cmd('Network.setUserAgentOverride', {
+                "userAgent": 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+            })
+            driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
         driver.get(url)
 
         # Wait for listings to load

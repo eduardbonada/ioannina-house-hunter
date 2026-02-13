@@ -50,7 +50,7 @@
       "url": "https://www.mesitikaioan.gr/el/akinita/anazitisi?listingType=sale&category=residential&region=167&roomsLow=2&priceLow=150000&priceHigh=350000&livingAreaLow=85&livingAreaHigh=&myCode=",
       "enabled": false,
       "scraping_method": "selenium",
-      "note": "Disabled: Site uses hCaptcha protection which blocks automated scraping"
+      "note": "Disabled: Requires fixing Python SSL certificates. Run: '/Applications/Python 3.12/Install Certificates.command' then enable this site"
     }
   ],
   "notifications": {
