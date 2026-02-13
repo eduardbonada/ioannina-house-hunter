@@ -49,6 +49,8 @@ def generate_report(listings):
             site_name = 'Gartzonikas'
         elif 'gikaispiti' in url:
             site_name = 'Gikaispiti'
+        elif 'mesitikaioan' in url:
+            site_name = 'Mesitikaioan'
         else:
             site_name = 'Unknown Site'
 

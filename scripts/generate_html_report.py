@@ -449,6 +449,9 @@ def generate_html_report(output_path=None):
         elif 'gikaispiti' in url.lower():
             source_name = 'Gikaispiti'
             source_color = '#e67e22'
+        elif 'mesitikaioan' in url.lower():
+            source_name = 'Mesitikaioan'
+            source_color = '#16a085'
         else:
             source_name = 'Unknown'
             source_color = '#95a5a6'

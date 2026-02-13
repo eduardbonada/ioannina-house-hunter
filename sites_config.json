@@ -44,6 +44,13 @@
       "url": "https://www.gikaispiti.gr/results.php?filter_int_to=1&filter_location%5B%5D=N167&filter_location%5B%5D=&filter_location%5B%5D=&filter_category%5B%5D=1&filter_subcategory%5B%5D=&filter_price_from=150000&filter_price_to=300000&filter_area_from=85&filter_area_to=&filter_bedrooms=2&filter_floor=&filter_heat=",
       "enabled": true,
       "scraping_method": "http"
+    },
+    {
+      "name": "Mesitikaioan",
+      "url": "https://www.mesitikaioan.gr/el/akinita/anazitisi?listingType=sale&category=residential&region=167&roomsLow=2&priceLow=150000&priceHigh=350000&livingAreaLow=85&livingAreaHigh=&myCode=",
+      "enabled": false,
+      "scraping_method": "selenium",
+      "note": "Disabled: Site uses hCaptcha protection which blocks automated scraping"
     }
   ],
   "notifications": {
