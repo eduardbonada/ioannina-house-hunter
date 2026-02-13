@@ -13,7 +13,7 @@ python3 scripts/scrape.py
 1. Checks all enabled sites in `sites_config.json`
 2. Extracts listings and compares with `state/seen_listings.json`
 3. Filters new listings based on criteria in `criteria_config.json`
-4. Generates markdown report in `reports/` directory
+4. Generates markdown report in `docs/` directory
 5. Updates state files
 6. **Automatically generates HTML visualization** of all reported listings
 
@@ -28,7 +28,7 @@ python3 scripts/generate_html_report.py
 
 **Features:**
 - Reads from `state/reported_listings.json`
-- Creates `reports/all_listings.html`
+- Creates `docs/all_listings.html`
 - Images in 4:3 ratio on the left
 - Property details on the right
 - Responsive design
@@ -99,7 +99,7 @@ Located in `scripts/utils/`:
 2. **View HTML report:**
    The HTML is automatically opened in your browser, or manually:
    ```bash
-   open reports/all_listings.html
+   open docs/all_listings.html
    ```
 
 3. **Regenerate HTML anytime:**

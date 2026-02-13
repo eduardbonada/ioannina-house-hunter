@@ -14,7 +14,7 @@ def generate_html_report(output_path=None):
     Generate HTML report from reported listings
 
     Args:
-        output_path: Optional custom output path. Defaults to reports/all_listings.html
+        output_path: Optional custom output path. Defaults to docs/all_listings.html
     """
     # Load reported listings
     reported_path = Path(__file__).parent.parent / "state" / "reported_listings.json"
@@ -549,9 +549,9 @@ def generate_html_report(output_path=None):
 
     # Save to file
     if output_path is None:
-        reports_dir = Path(__file__).parent.parent / "reports"
-        reports_dir.mkdir(exist_ok=True)
-        output_path = reports_dir / "all_listings.html"
+        docs_dir = Path(__file__).parent.parent / "docs"
+        docs_dir.mkdir(exist_ok=True)
+        output_path = docs_dir / "all_listings.html"
 
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(html)

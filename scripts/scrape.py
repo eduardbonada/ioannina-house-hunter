@@ -104,9 +104,9 @@ def main():
         report = generate_report(all_new_listings)
 
         # Save report
-        reports_dir = Path(__file__).parent.parent / "reports"
-        reports_dir.mkdir(exist_ok=True)
-        report_path = reports_dir / f"report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
+        docs_dir = Path(__file__).parent.parent / "docs"
+        docs_dir.mkdir(exist_ok=True)
+        report_path = docs_dir / f"report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
 
         with open(report_path, 'w', encoding='utf-8') as f:
             f.write(report)

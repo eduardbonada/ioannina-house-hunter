@@ -137,6 +137,7 @@ Thumbs.db
 *.html.backup
 
 # Generated reports and state files
-reports/*.html
-reports/*.md
+# Note: docs/all_listings.html is committed for GitHub Pages
+docs/report_*.md
+docs/proposal*.html
 state/*.json

@@ -59,7 +59,7 @@ Format as a clean markdown report, grouped by website.
 
 #### Automatic Generation
 - The scraper script (`scripts/scrape.py`) automatically generates an HTML report after each run
-- HTML file is saved to: `reports/all_listings.html`
+- HTML file is saved to: `docs/all_listings.html`
 - Shows ALL reported listings from `state/reported_listings.json`
 
 #### Manual Generation
@@ -79,7 +79,7 @@ The HTML visualization uses a **consistent layout**:
 
 #### When Showing Listings to User
 1. **Run the HTML generator** (or it's already generated from scraping)
-2. **Open the HTML** in the browser: `open reports/all_listings.html`
+2. **Open the HTML** in the browser: `open docs/all_listings.html`
 3. **Tell the user** about new listings and that the HTML is open
 
 This ensures a consistent, professional visualization every time.
