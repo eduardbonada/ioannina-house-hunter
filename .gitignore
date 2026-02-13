@@ -141,3 +141,4 @@ Thumbs.db
 docs/report_*.md
 docs/proposal*.html
 state/*.json
+cron.log
